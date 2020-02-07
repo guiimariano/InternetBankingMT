@@ -4,6 +4,7 @@ import * as mongoose from 'mongoose'
 
 import URI from './config/db.config'
 
+
 class App {
   public app: express.Application
   public PORT: number
