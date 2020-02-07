@@ -2,8 +2,6 @@ import * as cors from 'cors'
 import * as express from 'express'
 import * as mongoose from 'mongoose'
 
-import URI from './config/db.config'
-
 
 class App {
   public app: express.Application
@@ -22,7 +20,7 @@ class App {
   }
 
   public database (): void {
-    mongoose.connect(URI, {
+    mongoose.connect('URI', {
       useNewUrlParser: true,
       useUnifiedTopology: true
     })
@@ -30,7 +28,7 @@ class App {
 
   private routes (): void {
     this.app.get('/', (req, res) => {
-      return res.json({message: "Hello MB Team"})
+      return res.json({message: "Hellooo MB Team"})
     })
   }
 }

@@ -17,7 +17,7 @@ yarn
 
 3. Configurar o banco de dado, usando o [Atlas](https://www.mongodb.com/) se não tiver uma conta basta criar e seguir os passos até criar um cluster.
 
-4. Pega o link da conexão substitua o `<username>` e `<password>` pelos seus dados, e em seguida adiciona no file `./backend/src/config/bd.config.ts no campo`URI`.
+4. Pega o link da conexão adiciona no file `./backend/src/app.ts` no campo`URI` substitua o `<username>` e `<password>` pelos seus dados.
 
 ### OBS: N sobe os seus dados em repositorios publicos. Vamos usar variaveis de ambiente, por agora por ser ainda os testes vai ser desse jeito.
 
