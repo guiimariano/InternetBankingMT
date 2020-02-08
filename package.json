@@ -27,5 +27,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "ngx-materialize": "^6.1.3"
   }
 }
