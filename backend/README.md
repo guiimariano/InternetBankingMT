@@ -6,6 +6,7 @@
   MB Team
 </h2>
 
+<div>
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/guiimariano/InternetBankingMT?color=2650a3">
 
   <img alt="License" src="https://img.shields.io/badge/licence-MIT-2650a3">
@@ -14,7 +15,7 @@
     <img alt="Stargazers" src="https://img.shields.io/github/stars/guiimariano/InternetBankingMT?color=2650a3">
   </a>
 </p>
-
+</div>
 ## Table of contents
 
 - [General info](#general-info)
