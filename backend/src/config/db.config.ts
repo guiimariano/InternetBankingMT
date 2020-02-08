@@ -1,3 +1,3 @@
-const URI  = 'mongodb+srv://lopesboa:940904316C@nec@@cluster0-kpxoh.mongodb.net/test?retryWrites=true&w=majority'
+const URI: string = process.env.API_DB_URI as string
 
 export default URI
