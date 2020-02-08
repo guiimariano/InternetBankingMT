@@ -27,5 +27,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "env-var": "^5.2.0"
   }
 }
