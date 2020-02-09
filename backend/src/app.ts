@@ -5,7 +5,7 @@ import * as express from 'express'
 import * as mongoose from 'mongoose'
 
 import MONGO_URI from './config/db.config'
-import routes from './routes'
+import Routes from './routes/main.routes'
 
 
 class App {
@@ -26,13 +26,14 @@ class App {
 
   public database (): void {
     mongoose.connect(MONGO_URI, {
+      useUnifiedTopology: true,
       useNewUrlParser: true,
-      useUnifiedTopology: true
+      useCreateIndex: true
     })
   }
 
   private routes (): void {
-    this.app.use(routes)
+    this.app.use(Routes)
   }
 }
 
