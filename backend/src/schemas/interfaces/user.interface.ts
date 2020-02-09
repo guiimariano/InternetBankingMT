@@ -1,6 +1,6 @@
 import { Document } from 'mongoose'
 
-export declare interface UsersInterface extends Document {
+export interface UsersInterface extends Document {
   name?: string,
   celPhone?: number,
   preferedName?: string,
