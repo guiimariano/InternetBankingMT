@@ -1,5 +1,7 @@
 import { model, Schema } from 'mongoose'
 
+import { TransationInterface } from './interfaces/transation.interface'
+
 const TransationSchema = new Schema({
 
   userId: { type: Schema.Types.ObjectId, ref: 'User' },
@@ -12,8 +14,8 @@ const TransationSchema = new Schema({
   origin: { type: Schema.Types.ObjectId, ref: 'User' },
   destination: {type: Schema.Types.ObjectId, ref: 'User' },
   expireAt: { type: Date, default: Date.now, expires: '1y' },
-  Date: { type: Date, default: new Date()},
+  Date: { type: Date, default: new Date()}
 
 })
 
-export default model('Transation', TransationSchema)
+export default model<TransationInterface>('Transation', TransationSchema)

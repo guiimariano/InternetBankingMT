@@ -1,6 +1,6 @@
 import { Document, model, Schema } from 'mongoose'
 
-declare interface Account extends Document {
+interface Account extends Document {
 
   userId: string,
   agency: number,
