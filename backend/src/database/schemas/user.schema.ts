@@ -1,6 +1,6 @@
 import { model, Schema } from 'mongoose'
 
-import { UsersInterface } from './interfaces/user.interface'
+import { UsersInterface } from '../interfaces/user.interface'
 
 const UserSchema = new Schema({
  name: String,
