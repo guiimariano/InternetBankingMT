@@ -6,7 +6,7 @@ export default (req: Request, res :Response, next: NextFunction) => {
     if(err) return next(err)
 
     if(!user) return res.status(401)
-      .json({ message: 'Access denied - No token provided!' })
+      .json({ error: 'Access denied - No token provided!' })
     
     req.user = user
     next()
