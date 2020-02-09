@@ -1,3 +1,3 @@
-const URI: string = process.env.API_DB_URI as string
+const URI  = ''
 
 export default URI
