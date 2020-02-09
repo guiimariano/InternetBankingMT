@@ -1,11 +1,14 @@
 import { Document } from 'mongoose'
 
-export interface UsersInterface extends Document {
+interface UsersInterface extends Document {
   name?: string,
   celPhone?: number,
   preferedName?: string,
   email?: string,
   cpf?: number,
-  token?: string
+  password?: String,
+  token?: string,
   isVerified?: boolean
 }
+
+export default UsersInterface
