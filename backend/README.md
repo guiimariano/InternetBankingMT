@@ -1,8 +1,75 @@
-# SETUPT INICIAL
+<h1 align="center">
+  <img alt="MB Team" title="MB Team" src=".github/logotipo.png" width="200px" />
+</h1>
 
-1. Para usar o projeto basta dar um git clone no link do repo. (Lembrando que precisa ter o git instalado).
+<h2 align="center">
+  MB Team
+</h2>
 
-2. Instalar as dependencias usando o gerenciador de pacotes de sua preferencia
+<div align="center">
+
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/guiimariano/InternetBankingMT?color=2650a3">
+
+  <img alt="License" src="https://img.shields.io/badge/licence-MIT-2650a3">
+
+  <a href="https://github.com/guiimariano/InternetBankingMT/projects_store/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/guiimariano/InternetBankingMT?color=2650a3">
+  </a>
+</p>
+
+</div>
+
+## Table of contents
+
+- [General info](#general-info)
+- [About The Project](#about-the-project)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Commit Instructions](#Commit-Instructions)
+- [Padronizando Commits](#Padronizando-Commits)
+- [Features](#features)
+- [Status](#status)
+- [Inspiration](#inspiration)
+- [Contributing](#contributing)
+- [Contact](#contact)
+- [Licence](#licence)
+
+## General info
+
+This project is like the final test of our knowleged and until where we can go and pratice every single line of code that we've learn each day in Avanade Academy program.
+
+## About the project
+
+> Project for pitch training presentation. It aims to set up some screens for an Internet Banking. Angular 8 front end with typescript, consuming APIs in NodeJS.
+> .
+
+## Screenshots
+
+<!-- ![Example screenshot](./img/screenshot.png) -->
+
+## Technologies
+
+- Angular
+- Typescript
+- Nodejs
+- Express
+- SASS
+- MongoDB
+- Mongoose
+- JWT
+- Jwt-authentication
+- Jwt-token
+- Passport-strategy
+- others will come here...
+
+# Setup
+
+1.
+
+To use the project just give a git clone on the repo link. (Remembering that you need to have git installed on your PC).
+
+2. Install the dependencies using the package manager of your choice
 
 ```
 npm install
@@ -15,38 +82,42 @@ Ou
 yarn
 ```
 
-3. Configurar o banco de dado, usando o [Atlas](https://www.mongodb.com/) se não tiver uma conta basta criar e seguir os passos até criar um cluster.
+3. Configure the database, using [Atlas](https://www.mongodb.com/) if you don't have an account just create and follow the steps until you create a cluster.
 
-4. Pega o link da conexão adiciona no file `./backend/src/app.ts` no campo`URI` substitua o `<username>` e `<password>` pelos seus dados.
+4. Copy the `.env-sample` and rename as `.env`.
 
-### OBS: N sobe os seus dados em repositorios publicos. Vamos usar variaveis de ambiente, por agora por ser ainda os testes vai ser desse jeito.
+5. Get the link of the connection add in the file `.env` in the field`API_DB_URI` replace the`<username>`and`<password>`with your data, and port number too.
 
-5.  No file `packege.json` tem as instruções para rodar o projeto.
+### NOTE: Do not commit or push sensitive data in public repositories. We use environment variables, put all sensitive data on the `.env` file.
+
+6.  In the file `packege.json` you have the instructions for running the project.
 
 ## COMMIT INSTRUCTIONS
 
-1. Faz o fork do repositorio no seu. <br>
-   em seguida segue as instruções abaixo.
+1.
+
+Fork the repository on yours. <br>
+then follow the instructions below.
 
 ```
 ❯ git init
 
-❯ git config --global user.name "SEU NOME DE USUÁRIO"
+❯ git config --global user.name "YOUR USERNAME"
 
-❯ git config --global user.email "SEU EMAIL GIT"
+❯ git config --global user.email "EMAIL GIT"
 
-❯ git remote add origin "O LINK DO REPOSITORIO"
+❯ git remote add origin "REPO LINK"
 
 ❯ git pull origin master
 ```
 
-Cria um brench nova para não fazer os commites na `master`
+Ceate new brench, for prevent commites straight on the brench `master`
 
 ```
 ❯ git checkout -b dev
 ```
 
-### PADRONIZANDO COMMITS
+## PADRONIZANDO COMMITS
 
 Nós vamos usar o `commitlint` e o `commitzen` para padronizar as mensagens de commit do Git.
 
@@ -64,4 +135,26 @@ Para não ter que digitar sempre o mesmo comando podemos abreviar (já que a bre
 ❯ git push --set-upstream origin dev
 ```
 
-Mais instrução virão conforme a evolução do projeto, Vamos codar :metal: :muscle:
+## Status
+
+Project is: _in progress_
+
+ <!-- _finished_, _no longer continue_  -->
+
+## Inspiration
+
+<!-- Add here credits. Project inspired by..., based on... -->
+
+## Contributing
+
+We'll be very thankful if you are being interested on making this project better. we encourage everyone to help improve `mb-team` with new features, bug fixes and performance issues. Please treat this project as you would treat your own project.
+
+## Contact
+
+Created by [MB Team](https://github.com/marlb-team/InternetBankingMT) - feel free to contact us!
+
+## Licence
+
+MIT © [MB Team](https://github.com/marlb-team/InternetBankingMT)
+
+:metal: :muscle:
