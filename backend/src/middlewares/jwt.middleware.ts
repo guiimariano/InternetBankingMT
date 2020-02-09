@@ -1,14 +1,44 @@
-import { NextFunction, Request, Response } from 'express'
-import * as passport from 'passport'
+import { PassportStatic } from 'passport'
+import { ExtractJwt, Strategy as JWTStrategy } from 'passport-jwt'
 
-export default (req: Request, res :Response, next: NextFunction) => {
-  passport.authenticate('jwt', function(err, user, info) {
-    if(err) return next(err)
+import User from '../schemas/user.schema'
 
-    if(!user) return res.status(401).json({ message: 'Access denied - No token provided!'})
-    
-    req.user = user
-    next()
-  })(req, res, next)
-
+function configureJWT(passport: PassportStatic) {
+  passport.use('jwt', new JWTStrategy({
+          secretOrKey: process.env.APP_JWT_SECRET,
+          jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+          passReqToCallback: true,
+      }, (req, payload, done) => {
+          const token = ExtractJwt.fromAuthHeaderAsBearerToken()(req);
+          
+          SessionModel
+              .findOne({ token })
+              .then(session => {
+                  if (!session || session.fingerprint != req.fingerprint.hash) {
+                      throw `Invalid token`;
+                  }
+                  
+                  return User.findById(payload.id);
+              })
+              .then(user => {
+                  if (!user)
+                      throw `No user found with id ${payload.id}`;
+                  
+                  done(null, user);
+              })
+              .catch(err => {
+                  if (typeof err == 'string') {
+                      err = { message: err };
+                  }
+                  
+                  done(err);
+              });
+      })
+  )
+  
+  return passport;
 }
+
+export {
+  configureJWT,
+};
