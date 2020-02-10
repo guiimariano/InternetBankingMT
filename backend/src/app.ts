@@ -2,6 +2,7 @@ import 'dotenv/config'
 
 import * as cors from 'cors'
 import * as express from 'express'
+import * as helmet from 'helmet'
 import * as mongoose from 'mongoose'
 
 import MONGO_URI from './config/db.config'
@@ -19,6 +20,7 @@ class App {
   }
 
   private middlewares (): void {
+    this.app.use(helmet())
     this.app.use(express.json())
     this.app.use(cors())
     this.app.use(express())

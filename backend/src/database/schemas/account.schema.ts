@@ -14,6 +14,6 @@ const AccountSchema = new Schema({
   agency: Number,
   accountNumber: Number,
   cpf: Number
-})
+}, { timestamps: true } )
 
 export default model<Account>('Account', AccountSchema)
