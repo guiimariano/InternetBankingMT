@@ -6,7 +6,7 @@ import * as helmet from 'helmet'
 import * as mongoose from 'mongoose'
 
 import MONGO_URI from './config/db.config'
-import Routes from './routes/main.routes'
+import Routes from './routes/mainRoutes'
 
 
 class App {
