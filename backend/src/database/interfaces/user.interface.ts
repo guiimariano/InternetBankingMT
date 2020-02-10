@@ -1,6 +1,6 @@
-import { Document } from 'mongoose'
+import * as mongoose from 'mongoose'
 
-interface UsersInterface extends Document {
+interface UsersInterface extends mongoose.Document {
   name?: string,
   celPhone?: number,
   preferedName?: string,
