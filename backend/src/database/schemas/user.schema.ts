@@ -82,37 +82,44 @@ UserSchema.pre<UsersInterface>('save', function(next: NextFunction) {
   }
 })
 
-UserSchema.methods.generateJWT = function () {
-  const today = new Date();
-  const expirationDate = new Date(today)
-  expirationDate.setDate(today.getDate() + 60) //TODO verifie how much this retur
+UserSchema.methods = {
+  comparePassword (password: string) {
+    bcrypt.compare(password, this.password)
+  },
 
-  let payload = {
-    id: this._id,
-    name: this.name,
-    preferedName: this.preferedName,
-    email: this.email,
+  generateJWT () {
+    const today = new Date();
+    const expirationDate = new Date(today)
+    expirationDate.setDate(today.getDate() + 60) //TODO verifie how much this retur
+
+    let payload = {
+      id: this._id,
+      name: this.name,
+      email: this.email,
+    }
+
+    return JWT.sign(payload, JWT_SECRET, {
+      expiresIn: (expirationDate.getTime() / 1000, 10)
+    })
+  },
+
+  generatePasswordReset () {
+    this.resetPasswordToken = crypto.randomBytes(20).toString('hex')
+    this.resetPasswordExpires = Date.now() + 3600000 //expire in 1h
+  },
+
+  generateVerificationToken () {
+    let payload = {
+      userId: this._id,
+      token: crypto.randomBytes(20).toString('hex')
+    }
+
+    return new Token(payload)
   }
 
-  return JWT.sign(payload, JWT_SECRET, {
-    expiresIn: (expirationDate.getTime() / 1000, 10)
-  })
+
+
 }
-
-UserSchema.methods.generatePasswordReset = function () {
-  this.resetPasswordToken = crypto.randomBytes(20).toString('hex')
-  this.resetPasswordExpires = Date.now() + 3600000 //expire in 1h
-}
-
-UserSchema.methods.generateVerificationToken = function() {
-  let payload = {
-    userId: this._id,
-    token: crypto.randomBytes(20).toString('hex')
-  }
-
-  return new Token(payload)
-}
-
 
 // UserSchema.pre<UsersInterface>('save', async function (next: NextFunction) {
 //   // const user = (this as any)
