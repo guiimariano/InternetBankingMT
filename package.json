@@ -29,6 +29,5 @@
     }
   },
   "dependencies": {
-    "ngx-materialize": "^6.1.3"
   }
 }
