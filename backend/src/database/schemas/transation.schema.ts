@@ -16,6 +16,6 @@ const TransationSchema = new Schema({
   expireAt: { type: Date, default: Date.now, expires: '1y' },
   Date: { type: Date, default: new Date()}
 
-})
+}, { timestamps: true })
 
 export default model<TransationInterface>('Transation', TransationSchema)
