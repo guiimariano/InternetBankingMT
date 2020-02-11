@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+body, html {
+    margin: 0; 
+    padding: 0;
+}
+
+a {
+    font-size: .8em !important;
+}
+
+
+
+/* HELPERS */
+
+.card-max-size {
+    max-width: 278px !important;
+    height: auto !important;
+}
+
+.max-height {
+    height: 100vh;
+}
+.after-box {
+    clear: both !important;
+}
+
+.margin-top-10 {
+    margin-top: 10px !important;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}

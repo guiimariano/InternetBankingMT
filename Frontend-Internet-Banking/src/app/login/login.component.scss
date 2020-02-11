@@ -1,0 +1,15 @@
+.bg {
+    background-image: url("src/assets/BGLogin.jpg");
+
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .LogoImage {
+      content: url("src/assets/LogoGrande.png");
+      max-width: 10rem;
+      max-height: 10rem;
+  }
+
