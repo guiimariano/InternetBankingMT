@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SidenavComponent } from './shared/components/sidenav/sidenav.component';
-import { MzSidenavModule } from 'ngx-materialize';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { MzSidenavModule } from 'ngx-materialize';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    MzSidenavModule
+    MDBBootstrapModule.forRoot()
   ],
   providers: [{
     provide: LOCALE_ID,

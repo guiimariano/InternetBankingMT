@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { MzSidenavModule } from 'ngx-materialize';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-sidenav',
@@ -8,9 +7,19 @@ import { MzSidenavModule } from 'ngx-materialize';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('sidenav', {static: true}) sidenav: ElementRef;
+
+  clicked: boolean;
+
+  constructor() {
+    this.clicked = this.clicked === undefined ? false : true;
+  }
 
   ngOnInit() {
+  }
+
+  setClicked(val: boolean): void {
+    this.clicked = val;
   }
 
 }
