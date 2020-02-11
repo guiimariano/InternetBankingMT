@@ -83,7 +83,7 @@ UserSchema.pre<UsersInterface>('save', function(next: NextFunction) {
 })
 
 UserSchema.methods = {
-  comparePassword (password: string) {
+  comparePassword (password: any) {
     bcrypt.compare(password, this.password)
   },
 

@@ -5,7 +5,6 @@ import * as express from 'express'
 import * as helmet from 'helmet'
 import * as mongoose from 'mongoose'
 
-import MONGO_URI from './config/db.config'
 import Routes from './routes/mainRoutes'
 
 
@@ -27,7 +26,7 @@ class App {
   }
 
   public database (): void {
-    mongoose.connect(MONGO_URI, {
+    mongoose.connect(process.env.APP_API_DB_URI as string, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
       useCreateIndex: true
