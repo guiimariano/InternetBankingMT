@@ -4,7 +4,7 @@ import { NextFunction } from 'express'
 import JWT from 'jsonwebtoken'
 import * as mongoose from 'mongoose'
 
-import UsersInterface from '../interfaces/user.interface'
+import UsersInterface from '../interfaces/userInterface'
 import Token from './tokenSchema'
 
 // mongoose.Promise = global.Promise
@@ -83,7 +83,7 @@ UserSchema.pre<UsersInterface>('save', function(next: NextFunction) {
 })
 
 UserSchema.methods = {
-  comparePassword (password: string) {
+  comparePassword (password: any) {
     bcrypt.compare(password, this.password)
   },
 

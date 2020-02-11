@@ -15,8 +15,8 @@
   <a href="https://github.com/guiimariano/InternetBankingMT/projects_store/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/guiimariano/InternetBankingMT?color=2650a3">
   </a>
-</p>
 
+  <img alt="Stargazers" src="https://img.shields.io/github/stars/guiimariano/InternetBankingMT?style=social">
 </div>
 
 ## Table of contents

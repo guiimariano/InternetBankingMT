@@ -66,9 +66,7 @@ This project is like the final test of our knowleged and until where we can go a
 
 # Setup
 
-1.
-
-To use the project just give a git clone on the repo link. (Remembering that you need to have git installed on your PC).
+1. To use the project just give a git clone on the repo link. (Remembering that you need to have git installed on your PC).
 
 2. Install the dependencies using the package manager of your choice
 
@@ -87,9 +85,9 @@ yarn
 
 4. Copy the `.env-sample` and rename as `.env`.
 
-5. Get the link of the connection add in the file `.env` in the field`API_DB_URI` replace the`<username>`and`<password>`with your data, and port number too.
+5. Get the link of the connection add in the file `.env` in the field`APP_API_DB_URI` replace the`<username>`and`<password>`with your data, and port number too.
 
-### NOTE: Do not commit or push sensitive data in public repositories. We use environment variables, put all sensitive data on the `.env` file.
+### NOTE: Do not commit or push sensitive data in public repositories. We use environment variables, put all sensitive data on the `..env` file.
 
 6.  In the file `packege.json` you have the instructions for running the project.
 

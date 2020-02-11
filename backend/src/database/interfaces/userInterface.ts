@@ -8,7 +8,11 @@ interface UsersInterface extends mongoose.Document {
   cpf?: number,
   password?: String,
   token?: string,
-  isVerified?: boolean
+  isVerified?: boolean,
+  comparePassword(password: string): string,
+  generateJWT(): string,
+  generatePasswordReset(): string,
+  generateVerificationToken(): string,
 }
 
 export default UsersInterface

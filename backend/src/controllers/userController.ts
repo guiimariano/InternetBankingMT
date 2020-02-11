@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 
-import User from '../database/schemas/user.schema'
+import User from '../database/schemas/userSchema'
 
 class UserController {
 

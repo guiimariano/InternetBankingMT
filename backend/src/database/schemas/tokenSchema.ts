@@ -1,4 +1,9 @@
-import { model, Schema } from 'mongoose'
+import { Document, model, Schema } from 'mongoose'
+
+interface TokenInterface extends Document {
+  userId: string,
+  token: string,
+}
 
 const TokenSchema = new Schema({
   userId: {
@@ -18,4 +23,4 @@ const TokenSchema = new Schema({
   }
 }, {timestamps: true})
 
-export default model('Token', TokenSchema)
+export default model<TokenInterface>('Token', TokenSchema)
