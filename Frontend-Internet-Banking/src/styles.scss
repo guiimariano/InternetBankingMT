@@ -1,6 +1,41 @@
-html, body {
-    margin: 0;
+body, html {
+    margin: 0; 
     padding: 0;
+}
 
-    height: 100vh;
+a {
+    font-size: .8em !important;
+}
+
+
+
+/* HELPERS */
+
+.card-max-size {
+    max-width: 278px !important;
+    height: auto !important;
+}
+.after-box {
+    clear: both !important;
+}
+
+.margin-top-10 {
+    margin-top: 10px !important;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }

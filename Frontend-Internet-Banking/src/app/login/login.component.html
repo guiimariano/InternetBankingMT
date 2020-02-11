@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="bg col s12 flex-box">
+    <div class="content">
+      <mz-card class="col card card-content white-grey darken-1 grey-text card-max-size" [hoverable]="true">
+        <mz-card-image class="flex-box">
+          <div class="LogoImage"></div>
+        </mz-card-image>
+
+        <mz-card-content>
+          <div class="row">
+            <div class="col s12">
+              <input type="email" class="input-field" placeholder="Insira seu CPF" [(ngModel)]="cpf">
+            </div>
+
+            <div class="col s12">
+              <input type="password" class="input-field" placeholder="Insira sua senha" [(ngModel)]="senha">
+            </div>
+
+
+            <div class="content-center margin-top-10 col s12">
+              <div class="after-box row">
+                <button class="btn btn-block margin-bottom-10 col s12" type="submit"
+                  (click)="login()">Confirmar</button>
+                  <a href="#" class="center-align col s12">esqueceu sua senha?</a>
+                </div>
+            </div>
+          </div>
+        </mz-card-content>
+
+      </mz-card>
+    </div>
+  </div>
+</div>
