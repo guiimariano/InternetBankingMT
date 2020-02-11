@@ -16,6 +16,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     LoginComponent,
     HomeComponent,
     SidebarComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +24,7 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     FormsModule,
     HttpClientModule,
     MzCardModule
+    HttpClientModule
   ],
   providers: [{
     provide: LOCALE_ID,
