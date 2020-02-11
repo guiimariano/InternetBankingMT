@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="MB Team" title="MB Team" src=".github/logotipo.png" width="200px" />
+  <img alt="MB Team" title="MB Team" src="../.github/logotipo.png" width="200px" />
 </h1>
 
 <h2 align="center">
@@ -15,8 +15,8 @@
   <a href="https://github.com/guiimariano/InternetBankingMT/projects_store/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/guiimariano/InternetBankingMT?color=2650a3">
   </a>
-</p>
 
+  <img alt="Stargazers" src="https://img.shields.io/github/stars/guiimariano/InternetBankingMT?style=social">
 </div>
 
 ## Table of contents
@@ -33,6 +33,7 @@
 - [Inspiration](#inspiration)
 - [Contributing](#contributing)
 - [Contact](#contact)
+- [Authors](#Authors)
 - [Licence](#licence)
 
 ## General info
@@ -143,6 +144,12 @@ Project is: _in progress_
 
 ## Inspiration
 
+<div align="center">
+
+| [Vitor Santos](https://github.com/vitorfgsantos) |
+
+</div>
+
 <!-- Add here credits. Project inspired by..., based on... -->
 
 ## Contributing
@@ -152,6 +159,17 @@ We'll be very thankful if you are being interested on making this project better
 ## Contact
 
 Created by [MB Team](https://github.com/marlb-team/InternetBankingMT) - feel free to contact us!
+
+## Authors
+
+<table>
+  <tr>
+    <td align="center"><a href="https://linkedin.com/in/lopesboa"><img src="https://avatars3.githubusercontent.com/u/30527101?v=4?s=460&v=4" width="100px;" alt=""/><br /><sub><b>Lopes Boa</b></sub></a><br /><a href="#question-kentcdodds" title="Answering Questions">💬</a> <a href="https://github.com/guiimariano/InternetBankingMT/commits?author=lopesboa" title="Documentation">📖</a> <a href="https://github.com/guiimariano/InternetBankingMT/pulls?q=is%3Apr+reviewed-by%3lopesboa" title="Reviewed Pull Requests">👀</a> <a href="#talk-kentcdodds" title="Talks">📢</a></td>
+    <td align="center"><a href="www.linkedin.com/in/guiimariano21"><img src="https://avatars2.githubusercontent.com/u/31457675?v=4?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Guilherme M. Silva</b></sub></a><br /><a href="https://github.com/all-contributors/all-contributors/commits?author=jfmengels" title="Documentation">📖</a> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3Ajfmengels" title="Reviewed Pull Requests">👀</a> <a href="#tool-jfmengels" title="Tools">🔧</a></td>
+    <td align="center"><a href="https://jakebolam.com"><img src="https://avatars2.githubusercontent.com/u/44380538?v=4" width="100px;" alt=""/><br /><sub><b>Gabiela Alves</b></sub></a><br /><a href="https://github.com/all-contributors/all-contributors/commits?author=jakebolam" title="Documentation">📖</a><a href="#infra-jakebolam" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-jakebolam" title="Maintenance">🚧</a>
+    <a href="#design-tbenning" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/tbenning"><img src="https://avatars1.githubusercontent.com/u/13708405?v=4" width="100px;" alt=""/><br /><sub><b>André Monteiro</b></sub></a><br /> <a href="#maintenance-tbenning" title="Maintenance">🚧</a></td>
+    </table>
 
 ## Licence
 

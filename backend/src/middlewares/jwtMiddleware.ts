@@ -1,7 +1,7 @@
 import { PassportStatic } from 'passport'
 import { ExtractJwt, Strategy as JWTStrategy } from 'passport-jwt'
 
-import User from '../database/schemas/user.schema'
+import User from '../database/schemas/userSchema'
 
 function configureJWT(passport: PassportStatic) {
   passport.use('jwt', new JWTStrategy({
