@@ -1,6 +1,6 @@
 import { model, Schema } from 'mongoose'
 
-import { TransationInterface } from '../interfaces/transation.interface'
+import { TransationInterface } from '../interfaces/transationInterface'
 
 const TransationSchema = new Schema({
 
