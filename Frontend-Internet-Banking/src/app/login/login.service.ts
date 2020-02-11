@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, tap } from 'rxjs/operators';
 
-import { Usuario } from '../shared/interfaces/usuario.interface';
+import { Usuario } from '../shared/interfaces/usuario';
 import { AuthService } from '../shared/services/auth.service';
 
 @Injectable({
