@@ -10,7 +10,7 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent {
 
-  email: string;
+  cpf: string;
   senha: string;
 
   constructor(
@@ -19,7 +19,7 @@ export class LoginComponent {
   ) { }
 
   login() {
-    this.loginService.logar(this.email, this.senha)
+    this.loginService.logar(this.cpf, this.senha)
     .subscribe(response => {
       this.router.navigate(['home']);
     }, error => {
