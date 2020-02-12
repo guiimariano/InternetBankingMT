@@ -1,6 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
 import { LOCALE_ID, NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { MzCardModule, MzNavbarModule, MzSpinnerModule } from 'ngx-materialize';
@@ -9,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { CardSaldoComponent } from './shared/card-saldo/card-saldo.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
@@ -18,7 +18,8 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     LoginComponent,
     HomeComponent,
     SidebarComponent,
-    NavbarComponent
+    NavbarComponent,
+    CardSaldoComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +28,6 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     HttpClientModule,
     MzCardModule, 
     MzSpinnerModule, 
-    FlexLayoutModule, 
     MzNavbarModule
   ],
   providers: [{
