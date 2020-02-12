@@ -13,6 +13,8 @@ export class LoginComponent {
   cpf: string;
   senha: string;
 
+  estaCarregando = false;
+
   constructor(
     private loginService: LoginService,
     private router: Router,
@@ -22,7 +24,9 @@ export class LoginComponent {
     this.loginService.logar(this.cpf, this.senha)
     .subscribe(response => {
       this.router.navigate(['home']);
+      this.estaCarregando = false;
     }, error => {
+      this.estaCarregando = true;
       console.error('NÃO DEU CERTO!! NÃO LOGOU!');
     });
   }

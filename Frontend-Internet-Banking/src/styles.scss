@@ -10,7 +10,17 @@ a {
 
 
 /* HELPERS */
+.text-dark {
+    color: #57595A !important;
+}
 
+.grey-bg {
+    background-color: #F5F5F5 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
 .card-max-size {
     max-width: 278px !important;
     height: auto !important;
