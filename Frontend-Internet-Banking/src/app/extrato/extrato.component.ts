@@ -16,12 +16,18 @@ export class ExtratoComponent implements OnInit {
   dataAtual: Date;
   dataInicial: Date;
   diasPadrao: number;
+  mobile = false;
 
   constructor(
     private extratoService: ExtratoService
   ) { }
 
   ngOnInit() {
+
+    if (window.screen.width <= 425) {
+      this.mobile = true;
+    }
+
     this.extratoService.getExtrato()
       .pipe(
         take(1),
@@ -44,7 +50,7 @@ export class ExtratoComponent implements OnInit {
 
   calculoDatas(dias: number) {
     this.dataInicial = new Date();
-    this.dataInicial.setDate(this.dataAtual.getDate() - dias);
+    this.dataInicial.setDate(this.dataAtual.getDate() - (dias - 1));
     this.dataInicial.setHours(0, 0, 0, 0);
   }
 

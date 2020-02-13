@@ -39,8 +39,8 @@
                         <div class="col s6">
                             <div class="row">
                                 <mz-input-container class="col s4">
-                                    <input mz-input [label]="'Valor: R$'" [validate]="true" id="valor_transferencia" [placeholder]="' '"
-                                        type="text">
+                                    <input mz-input [label]="'Valor: R$'" [validate]="true" id="valor_transferencia"
+                                        [placeholder]="' '" type="text">
                                 </mz-input-container>
                                 <mz-select-container class="col s8" [inline]="'true'">
                                     <select mz-select id="tipo_transferencia" [label]="' '">
@@ -49,28 +49,20 @@
                                     </select>
                                 </mz-select-container>
                                 <mz-input-container class="col s12">
-                                    <input mz-input [label]="'Histórico'" [validate]="true" id="historico_transferencia" [placeholder]="' '"
-                                        type="text">
+                                    <input mz-input [label]="'Histórico'" [validate]="true" id="historico_transferencia"
+                                        [placeholder]="' '" type="text">
                                 </mz-input-container>
                             </div>
                         </div>
                         <div class="col s6">
                             <mz-radio-button-container>
-                                <input mz-radio-button
-                                  [label]="'Tranferir hoje'"
-                                  [withGap]="true"
-                                  id="transferir_hoje"
-                                  name="radio-transferencia-data"
-                                  type="radio">
-                              </mz-radio-button-container>
-                              <mz-radio-button-container>
-                                <input mz-radio-button
-                                  [label]="'Agendar para'"
-                                  [withGap]="true"
-                                  id="transferir_agendado"
-                                  name="radio-transferencia-data"
-                                  type="radio">
-                              </mz-radio-button-container>
+                                <input mz-radio-button [label]="'Tranferir hoje'" [withGap]="true" id="transferir_hoje"
+                                    name="radio-transferencia-data" type="radio">
+                            </mz-radio-button-container>
+                            <mz-radio-button-container>
+                                <input mz-radio-button [label]="'Agendar para'" [withGap]="true"
+                                    id="transferir_agendado" name="radio-transferencia-data" type="radio">
+                            </mz-radio-button-container>
                         </div>
                     </div>
                 </form>

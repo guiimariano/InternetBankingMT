@@ -1,37 +1,50 @@
-<div>
-    <p> Extrato de {{dataInicial | date}} até {{dataAtual | date}}</p>
-    <div>
-        <select class="select" name="selectPeriodo" (change)="changeSuit($event)">
-            <option value="7">7 dias</option>
-            <option value="15">15 dias</option>
-            <option value="30">30 dias</option>
-            <option value="45">45 dias</option>
-            <option value="60">60 dias</option>
-            <option value="90">90 dias</option>
-        </select>
-        <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Descrição</th>
-                    <th>Categoria</th>
-                    <th>Data</th>
-                    <th>Valor</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let transacao of extratoFiltrado">
-                    <td>{{ transacao.id }}</td>
-                    <td>{{ transacao.descricao }}</td>
-                    <td>{{ transacao.categoria }}</td>
-                    <td>{{ transacao.data | date }}</td>
-                    <td [ngClass]="{'negativo':transacao.valor < 0,
+<div class="row no-margin">
+    <div class="no-padding hide-on-small-only" [ngClass]="!mobile ? 'col s3' : 'col'">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="no-padding bg-grey" [ngClass]="mobile ? 'col s12' : 'col s9'">
+        <app-navbar></app-navbar>
+        <div class="row container">
+            <div class="col s12">
+                <div class="row s12 m12">
+                    <p class="right-align"> Extrato de {{dataInicial | date}} até {{dataAtual | date}}</p>
+                    <mz-select-container class="col s9 m3">
+                        <select mz-select [label]="'Selecione o periodo'" id="basic-select"
+                            (change)="changeSuit($event)">
+                            <option value="7">7 dias</option>
+                            <option value="15">15 dias</option>
+                            <option value="30">30 dias</option>
+                            <option value="45">45 dias</option>
+                            <option value="60">60 dias</option>
+                            <option value="90">90 dias</option>
+                        </select>
+                    </mz-select-container>
+                </div>
+                <table class="responsive-table ">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Descrição</th>
+                            <th>Categoria</th>
+                            <th>Data</th>
+                            <th>Valor</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let transacao of extratoFiltrado">
+                            <td>{{ transacao.id }}</td>
+                            <td>{{ transacao.descricao }}</td>
+                            <td>{{ transacao.categoria }}</td>
+                            <td>{{ transacao.data | date }}</td>
+                            <td [ngClass]="{'negativo':transacao.valor < 0,
                                     'positivo':transacao.valor > 0}">
-                        {{ transacao.valor | currency:'BRL' }}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                                {{ transacao.valor | currency:'BRL' }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
