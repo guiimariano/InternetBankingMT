@@ -1,26 +1,37 @@
-<div class="container text-center p-5">
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Descrição</th>
-                <th scope="col">Categoria</th>
-                <th scope="col">Data</th>
-                <th scope="col">Valor</th>
-                <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let transacao of extrato">
-                <td>{{ transacao.id }}</td>
-                <td>{{ transacao.descricao }}</td>
-                <td>{{ transacao.categoria }}</td>
-                <td>{{ transacao.data | date }}</td>
-                <td [ngClass]="{'negativo':transacao.valor < 0,
-                                'positivo':transacao.valor > 0}">
-                    {{ transacao.valor | currency:'BRL' }}
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<div>
+    <p> Extrato de {{dataInicial | date}} até {{dataAtual | date}}</p>
+    <div>
+        <select class="select" name="selectPeriodo" (change)="changeSuit($event)">
+            <option value="7">7 dias</option>
+            <option value="15">15 dias</option>
+            <option value="30">30 dias</option>
+            <option value="45">45 dias</option>
+            <option value="60">60 dias</option>
+            <option value="90">90 dias</option>
+        </select>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Descrição</th>
+                    <th>Categoria</th>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let transacao of extratoFiltrado">
+                    <td>{{ transacao.id }}</td>
+                    <td>{{ transacao.descricao }}</td>
+                    <td>{{ transacao.categoria }}</td>
+                    <td>{{ transacao.data | date }}</td>
+                    <td [ngClass]="{'negativo':transacao.valor < 0,
+                                    'positivo':transacao.valor > 0}">
+                        {{ transacao.valor | currency:'BRL' }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_URL: 'https://my-json-server.typicode.com/vitorfgsantos/fake-api'
+  API_URL: 'https://my-json-server.typicode.com/AndreAlbuquerque9/fake-api'
 };
 
 /*
