@@ -10,6 +10,9 @@ import { AppComponent } from './app.component';
 import { ExtratoComponent } from './extrato/extrato.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { CardSaldoComponent } from './shared/card-saldo/card-saldo.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -18,14 +21,18 @@ registerLocaleData(localePt, 'pt');
     AppComponent,
     LoginComponent,
     HomeComponent,
-    ExtratoComponent
+    ExtratoComponent,
+    SidebarComponent,
+    NavbarComponent,
+    CardSaldoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [{
     provide: LOCALE_ID,
