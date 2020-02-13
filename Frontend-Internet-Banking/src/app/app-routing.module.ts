@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { LogadoGuard } from './shared/guard/logado.guard';
 import { NaoLogadoGuard } from './shared/guard/nao-logado.guard';
+import { TransferenciasComponent } from './transferencias/transferencias.component';
 
 
 const routes: Routes = [{
@@ -15,6 +16,10 @@ const routes: Routes = [{
 }, {
   path: 'home',
   component: HomeComponent,
+  canActivate: [LogadoGuard],
+}, {
+  path: 'transferencias',
+  component: TransferenciasComponent,
   canActivate: [LogadoGuard],
 }, {
   path: '',
