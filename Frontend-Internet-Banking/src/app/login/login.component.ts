@@ -9,9 +9,10 @@ import { LoginService } from './login.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+
   cpf: string;
-  email: string;
   senha: string;
+  estaCarregando = false;
 
   constructor(
     private loginService: LoginService,
@@ -20,11 +21,12 @@ export class LoginComponent {
 
   login() {
     this.loginService.logar(this.cpf, this.senha)
-    this.loginService.logar(this.email, this.senha)
     .subscribe(response => {
       this.router.navigate(['home']);
+      this.estaCarregando = true;
     }, error => {
       console.error('NÃO DEU CERTO!! NÃO LOGOU!');
+      this.estaCarregando = false;
     });
   }
 }

@@ -1,7 +1,10 @@
 <div class="row">
+
   <div class="bg col s12 flex-box">
     <div class="content">
-      <mz-card class="col card card-content white-grey darken-1 grey-text card-max-size" [hoverable]="true">
+      <mz-card class="col card card-content white-grey darken-1 grey-text card-max-size" 
+        [hoverable]="true" *ngIf="!estaCarregando">
+        
         <mz-card-image class="flex-box">
           <div class="LogoImage"></div>
         </mz-card-image>
@@ -21,8 +24,8 @@
               <div class="after-box row">
                 <button class="btn btn-block margin-bottom-10 col s12" type="submit"
                   (click)="login()">Confirmar</button>
-                  <a href="#" class="center-align col s12">esqueceu sua senha?</a>
-                </div>
+                <a href="#" class="center-align col s12">esqueceu sua senha?</a>
+              </div>
             </div>
           </div>
         </mz-card-content>
@@ -31,22 +34,3 @@
     </div>
   </div>
 <div class="text-center">
-
-  
-    <div class="form-signin pt-5">
-      <h1 class="h3 mb-3 font-weight-normal">Seja bem-vindo!</h1>
-  
-      <div class="p-2">
-        <input type="email" class="form-control" placeholder="Email" [(ngModel)]="email">
-      </div>
-  
-      <div class="p-2">
-        <input type="password" class="form-control" placeholder="Password" [(ngModel)]="senha">
-      </div>
-  
-      <div class="p-2">
-        <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="login()">Entrar</button>
-      </div>
-  
-    </div>
-</div>
