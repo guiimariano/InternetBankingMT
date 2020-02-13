@@ -1,10 +1,18 @@
-<div class="row max-height sidenav sidenav-fixed hide-on-small-only" id="nav-mobile">
+<div class="row max-height sidenav sidenav-fixed">
 
-    <div class="col s3 max-height nav-color">
-        <i class="circle logo-image-circle responsive-image"> </i>
-    </div>
+    <div class="max-height nav-color">
+        <a routerLink=""><i class="circle logo-image-circle responsive-image"> </i></a>
+        <div class="topics">
+            <h6>Conta</h6>
+            <p><a routerLink="../home" routerLinkActive="ativado">Dados Gerais</a></p>
+            <h6>Transações</h6>
+            <p><a routerLink="../transferencias" routerLinkActive="ativado">Transferências</a></p>
+            <p><a routerLink="../extrato" routerLinkActive="ativado">Extrato</a></p>
+        </div>
 
-    <div class="col s9 max-height">
-        <p></p>
+        <div class="footer">
+            © 2020 | MBTeam. All Rights Reserved
+        </div>
     </div>
+    
 </div>

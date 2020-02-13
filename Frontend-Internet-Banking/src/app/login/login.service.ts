@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, tap } from 'rxjs/operators';
 
-import { Usuario } from '../shared/interfaces/usuario';
+import { Usuario } from '../shared/interfaces/usuario.interface';
 import { AuthService } from '../shared/services/auth.service';
 
 @Injectable({
@@ -14,8 +14,8 @@ export class LoginService {
     private authService: AuthService,
   ) { }
 
-  logar(email: string, senha: string): Observable<Usuario> {
-    if (email === 'cpf' && senha === '123') {
+  logar(cpf: string, senha: string): Observable<Usuario> {
+    if (cpf === 'cpf' && senha === '123') {
       return of({
         nome: 'André',
         email: 'email@teste.com.br',

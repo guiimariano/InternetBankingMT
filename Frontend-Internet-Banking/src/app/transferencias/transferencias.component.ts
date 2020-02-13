@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-transferencias',
+  templateUrl: './transferencias.component.html',
+  styleUrls: ['./transferencias.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class TransferenciasComponent implements OnInit {
 
   mobile = false;
   constructor() { }
+
   ngOnInit() {
     if (window.screen.width <= 425) {
       this.mobile = true;
