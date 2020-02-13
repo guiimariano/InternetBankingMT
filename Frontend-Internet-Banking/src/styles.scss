@@ -1,16 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body, html {
     margin: 0; 
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
     font-size: .8em !important;
 }
 
+h2 {
+    font-size: 26px !important;
+}
 
 
 /* HELPERS */
+.text-dark {
+    color: #57595A !important;
+}
 
+.grey-bg {
+    background-color: #F5F5F5 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
 .card-max-size {
     max-width: 278px !important;
     height: auto !important;
