@@ -10,7 +10,7 @@
 
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/guiimariano/InternetBankingMT?color=5471FB">
 
-  <img alt="License" src="https://img.shields.io/badge/licence-MIT-?color=5471FB ">
+  <img alt="License" src="https://img.shields.io/badge/licence-MIT-5471FB ">
 
  <img alt="Stargazers" src="https://img.shields.io/github/stars/guiimariano/InternetBankingMT?style=social">
 
