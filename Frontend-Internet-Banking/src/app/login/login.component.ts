@@ -24,7 +24,6 @@ export class LoginComponent {
     .subscribe(response => {
       this.router.navigate(['home']);
       this.estaCarregando = true;
-      this.estaCarregando = false;
     }, error => {
       this.estaCarregando = true;
       console.error('NÃO DEU CERTO!! NÃO LOGOU!');
