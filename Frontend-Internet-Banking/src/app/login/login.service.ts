@@ -20,7 +20,8 @@ export class LoginService {
         nome: 'André',
         email: 'email@teste.com.br',
         agencia: '1234',
-        conta: '5432'
+        conta: '5432',
+        saldo: '12000'
       }).pipe(
         delay(2000),
         tap(usuario => {

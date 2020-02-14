@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   nome: string;
   agencia: string;
   conta: string;
+  saldo: string;
 
   constructor(
     private authService: AuthService
@@ -23,6 +24,8 @@ export class NavbarComponent implements OnInit {
     this.nome = this.authService.getUsuario().nome;
     this.agencia = this.authService.getUsuario().agencia;
     this.conta = this.authService.getUsuario().conta;
+    this.saldo = this.authService.getUsuario().saldo;
+    console.log (this.saldo = this.authService.getUsuario().saldo);
 
   }
   logout() {
