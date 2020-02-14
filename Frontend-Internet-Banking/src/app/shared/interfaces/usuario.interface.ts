@@ -1,4 +1,12 @@
 export interface Usuario {
-    nome: string;
+    token: string;
+    name: string;
     email: string;
+    agencyNumber: number;
+    accountNumber: number;
+    balance: number;
+    celphone: number;
+    preferedName: string;
+    cpf: number;
+
 }

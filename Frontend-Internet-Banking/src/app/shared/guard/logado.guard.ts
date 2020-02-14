@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, Router } from '@angular/router';
+import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 import { AuthService } from '../services/auth.service';
 
@@ -12,14 +12,14 @@ export class LogadoGuard implements CanActivate {
     private authService: AuthService,
     private router: Router
   ) { }
-  canActivate(): boolean {
-    const usuario = this.authService.getUsuario();
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot){
+    const currentUser = this.authService.currentUserValue;
+        if (currentUser) {
+          // logged in so return true
+          return true;
+        }
 
-    if (usuario) {
-      return true;
-    }
-
-    this.router.navigate(['login']);
-    return false;
+      this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+      return false;
   }
 }

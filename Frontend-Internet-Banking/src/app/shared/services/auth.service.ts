@@ -11,9 +11,9 @@ export class AuthService {
 
   constructor() { }
 
-  setUsuario(usuario: Usuario) {
-    localStorage.setItem('usuario', JSON.stringify(usuario));
-    this.usuarioLogado = usuario;
+  setUsuario(token: Usuario) {
+    localStorage.setItem('usuario', JSON.stringify(token));
+    this.usuarioLogado = token;
   }
 
   getUsuario() {

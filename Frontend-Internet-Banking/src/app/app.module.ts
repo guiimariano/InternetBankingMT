@@ -1,5 +1,5 @@
 import { registerLocaleData } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import localePt from '@angular/common/locales/pt';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -22,6 +22,7 @@ import { CardSaldoComponent } from './shared/card-saldo/card-saldo.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { TransferenciasComponent } from './transferencias/transferencias.component';
+import { ErrorInterceptor } from './_helpers/error.interceptor';
 
 registerLocaleData(localePt, 'pt');
 
@@ -50,10 +51,10 @@ registerLocaleData(localePt, 'pt');
     HttpClientModule,
     MzNavbarModule
   ],
-  providers: [{
-    provide: LOCALE_ID,
-    useValue: 'pt'
-  }],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    { provide: LOCALE_ID, useValue: 'pt'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
