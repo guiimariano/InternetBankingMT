@@ -12,10 +12,7 @@
 
   <img alt="License" src="https://img.shields.io/badge/licence-MIT-2650a3">
 
-  <a href="https://github.com/guiimariano/InternetBankingMT/projects_store/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/guiimariano/InternetBankingMT?color=2650a3">
-  </a>
-</p>
+ <img alt="Stargazers" src="https://img.shields.io/github/stars/guiimariano/InternetBankingMT?style=social">
 
 </div>
 
