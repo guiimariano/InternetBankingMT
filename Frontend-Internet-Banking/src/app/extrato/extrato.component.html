@@ -1,14 +1,15 @@
 <div class="row no-margin">
-    <div class="no-padding hide-on-small-only col m4 l4">
+    <div class="no-padding col s12 m2 l2">
         <app-sidebar></app-sidebar>
     </div>
-    <div class="no-padding bg-grey col s12 m8 l8">
+    <div class="no-padding col s12 m10 l10 overflow">
         <app-navbar></app-navbar>
         <div class="row container">
             <div class="col s12">
-                <div class="row s12 m12">
-                    <p class="right-align font-small"> Extrato de {{dataInicial | date}} até {{dataAtual | date}}</p>
-                    <mz-select-container class="col s9 m3">
+                <div class="row">
+                    <h5 class="col s12 m9 l9"> Extrato de {{dataInicial | date : 'shortDate' }} até
+                        {{dataAtual | date : 'shortDate'}}</h5>
+                    <mz-select-container class="col s12 m3 l3">
                         <select mz-select [label]="'Selecione o periodo'" id="basic-select"
                             (change)="changeSuit($event)">
                             <option value="7">7 dias</option>
@@ -20,21 +21,21 @@
                         </select>
                     </mz-select-container>
                 </div>
-                <table class="responsive-table">
+                <table class="responsive-table highlight">
                     <thead>
                         <tr>
+                            <th>Data</th>
                             <th>Descrição</th>
                             <th>Categoria</th>
-                            <th>Data</th>
                             <th>Valor</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let transacao of extratoFiltrado">
+                            <td>{{ transacao.data | date : 'shortDate'}}</td>
                             <td>{{ transacao.descricao }}</td>
                             <td>{{ transacao.categoria }}</td>
-                            <td>{{ transacao.data | date }}</td>
                             <td [ngClass]="{'negativo':transacao.valor < 0,
                                     'positivo':transacao.valor > 0}">
                                 {{ transacao.valor | currency:'BRL' }}

@@ -1,6 +1,3 @@
-.sidenav{
-    position: fixed;
-
     .logo-image-circle {
         content: url('src/assets/LogoPequenoNegativo.png');
         max-width: 5rem;
@@ -12,18 +9,18 @@
 
         .page-footer{
             background-color: #476371;
-            margin-top: 40%;
+            margin-top: 10vh;
         }
         .topics{
         color: #D2EAEA;
-        margin-left: 80px;
+        margin-left: 20px;
         font-family: Roboto;
         
-        p{
+        p {
             margin-left: 30px;
             font-family: Roboto;
             color: #D2EAEA;
-            font-size: 25px;
+            font-size: 18px;
         
         a:link, a:visited {
             text-decoration: none;
@@ -41,4 +38,3 @@
         
         
     }
-}

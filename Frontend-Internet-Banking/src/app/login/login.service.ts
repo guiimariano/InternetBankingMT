@@ -19,6 +19,8 @@ export class LoginService {
       return of({
         nome: 'André',
         email: 'email@teste.com.br',
+        agencia: '1234',
+        conta: '5432'
       }).pipe(
         delay(2000),
         tap(usuario => {

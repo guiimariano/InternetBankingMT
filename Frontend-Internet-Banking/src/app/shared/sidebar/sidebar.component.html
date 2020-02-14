@@ -1,4 +1,45 @@
-<div class="sidenav">
+<div class="row">
+    <mz-sidenav class="col" #sidenav [id]="'sidenav-demo'" [fixed]="'true'" style="background-color: transparent">
+            <div class="max-height nav-color">
+                <a routerLink=""><i class="circle logo-image-circle responsive-image"> </i></a>
+                <div class="topics">
+                    <ul>
+                        <li>
+                            <h6>Conta</h6>
+                        </li>
+                        <li>
+                            <a class="white-text" routerLink="../home" routerLinkActive="ativado">Dados Gerais</a>
+                        </li>
+                        <li>
+                            <h6>Transações</h6>
+                        </li>
+                        <li>
+                            <a class="white-text" routerLink="../transferencias" routerLinkActive="ativado">Transferências</a>
+                        </li>
+                        <li>
+                            <a class="white-text" routerLink="../extrato" routerLinkActive="ativado">Extrato</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <footer class="page-footer" id="page-footer">
+                    <div class="footer-copyright">
+                        <div class="container">
+                            <p class="center">© 2020 Copyright MbTeam</p>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
+    </mz-sidenav>
+</div>
+<button class="hide-on-med-and-up waves-effect waves-teal btn-flat" mz-button
+    (click)="sidenav.opened = !sidenav.opened">
+    <i class="material-icons">
+        menu
+    </i>
+</button>
+<!-- <div class="sidenav">
     <div class="row max-height sidenav sidenav-fixed">
 
         <div class="max-height nav-color">
@@ -22,4 +63,4 @@
         </div>
         
     </div>
-</div>
+</div> -->

@@ -1,14 +1,15 @@
 <div class="card-saldo">
     <div class="container row valign-wrapper">
         <div class="col s12 m7 l7 hide-on-small-only">
-            <p class="font-big no-margin ">Seja bem vindx, Thiago</p>
+            <h5 class="no-margin ">Seja bem vindx, {{nome}}</h5>
         </div>
         <div class="col s12 m7 l7 show-on-small  hide-on-med-and-up">
-            <p>Agencia: 1234-X</p>
-            <p>Conta: 1234567-X</p>
+            <p><span class="text-bold">Agencia:</span> {{agencia}}</p>
+            <p> <span class="text-bold">Conta: </span>{{conta}}</p>
         </div>
         <div class="col s12 m5 l5">
             <p class="font-medium text-tiny">Saldo</p>
-            <p class="font-medium text-bold">R$ 12.000,00</p>
+            <p class="font-medium text-bold" [ngClass]="{'negativo':saldo_total < 0,
+            'positivo':saldo_total > 0}">R$ 12.000,00</p>
     </div>
 </div>
