@@ -120,6 +120,11 @@ h2 {
 .icon-white {
     color: white;
 }
+.overflow-hidden {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
 
 .bg-yellow {
     background-color: rgb(226, 188, 73);
