@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  API_URL: 'https://my-json-server.typicode.com/AndreAlbuquerque9/fake-api'
+  API_URL: 'https://my-json-server.typicode.com/AndreAlbuquerque9/fake-api',
+  API_MB_URL: 'https://mb-team.herokuapp.com/api'
 };
 
 /*
