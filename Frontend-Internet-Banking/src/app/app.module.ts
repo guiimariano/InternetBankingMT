@@ -10,12 +10,14 @@ import {
   MzNavbarModule,
   MzRadioButtonModule,
   MzSelectModule,
+  MzSidenavModule,
   MzSpinnerModule,
 } from 'ngx-materialize';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExtratoComponent } from './extrato/extrato.component';
+import { HomeCardComponent } from './home-card/home-card.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CardSaldoComponent } from './shared/card-saldo/card-saldo.component';
@@ -34,7 +36,8 @@ registerLocaleData(localePt, 'pt');
     SidebarComponent,
     NavbarComponent,
     TransferenciasComponent,
-    CardSaldoComponent
+    CardSaldoComponent,
+    HomeCardComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ registerLocaleData(localePt, 'pt');
     MzInputModule,
     MzRadioButtonModule,
     HttpClientModule,
-    MzNavbarModule
+    MzNavbarModule,
+    MzSidenavModule
   ],
   providers: [{
     provide: LOCALE_ID,

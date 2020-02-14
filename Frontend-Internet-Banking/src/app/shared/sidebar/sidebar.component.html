@@ -1,25 +1,48 @@
-<div class="sidenav">
-    <div class="row max-height sidenav sidenav-fixed">
+<div class="bg-yellow">
+    <div class="row container no-margin">
+        <mz-sidenav class="col" #sidenav [id]="'sidenav-demo'" [fixed]="'true'" style="background-color: transparent">
+            <div class="max-height nav-color">
+                <div class="row">
+                    <button mz-button class="col s5 offset-s6 btn-flat white-text show-on-small hide-on-med-and-up"
+                        (click)="logout()">
+                        <i class="material-icons icon-white right">close</i>Sair
+                    </button>
+                </div>
+                <a routerLink=""><i class="circle logo-image-circle responsive-image"> </i></a>
+                <div class="topics">
+                    <ul>
+                        <li>
+                            <h6>Conta</h6>
+                        </li>
+                        <li>
+                            <a class="white-text" routerLink="../home" routerLinkActive="ativado">Dados Gerais</a>
+                        </li>
+                        <li>
+                            <h6>Transações</h6>
+                        </li>
+                        <li>
+                            <a class="white-text" routerLink="../transferencias"
+                                routerLinkActive="ativado">Transferências</a>
+                        </li>
+                        <li>
+                            <a class="white-text" routerLink="../extrato" routerLinkActive="ativado">Extrato</a>
+                        </li>
+                    </ul>
+                </div>
 
-        <div class="max-height nav-color">
-            <a routerLink=""><i class="circle logo-image-circle responsive-image"> </i></a>
-            <div class="topics">
-                <h4>Conta</h4>
-                <p><a routerLink="../home" routerLinkActive="ativado">Dados Gerais</a></p>
-                <h4>Transações</h4>
-                <p><a routerLink="../transferencias" routerLinkActive="ativado">Transferências</a></p>
-                <p><a routerLink="../extrato" routerLinkActive="ativado">Extrato</a></p>
+                <footer class="page-footer" id="page-footer">
+                    <div class="footer-copyright">
+                        <div class="container">
+                            <p class="center">© 2020 Copyright MbTeam</p>
+                        </div>
+                    </div>
+                </footer>
+
             </div>
-
-            <footer class="page-footer" id="page-footer">
-                <div class="footer-copyright">
-                <div class="container">
-                © 2020 Copyright MbTeam
-                </div>
-                </div>
-            </footer>
-                
-        </div>
-        
+        </mz-sidenav>
+        <button mz-button class="offset-s11 s6 col btn-flat left-align padding-top-10"
+            (click)="sidenav.opened = !sidenav.opened">
+            <span class="material-icons icon-white">menu</span>
+        </button>
     </div>
 </div>
