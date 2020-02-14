@@ -3,4 +3,5 @@ export interface Usuario {
     email: string;
     agencia: string;
     conta: string;
+    saldo: string;
 }

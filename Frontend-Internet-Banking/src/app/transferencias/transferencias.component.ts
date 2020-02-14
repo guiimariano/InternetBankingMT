@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-transferencias',
@@ -7,13 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransferenciasComponent implements OnInit {
 
-  mobile = false;
-  constructor() { }
+  transferenciaForm: FormGroup;
+  submitted = false;
+
+  constructor(
+    private formBuilder: FormBuilder
+  ) { }
 
   ngOnInit() {
-    if (window.screen.width <= 425) {
-      this.mobile = true;
-    }
+
+    
+  }
+  get f() { return this.transferenciaForm.controls; }
+
+  onSubmit = function (form) {
+    console.log(form);
+
+    const body = "instituicao=" + form.instituicao  
+              + "&tipo_conta=" + form.tipo_conta 
+              + "&agencia=" + form.agencia
+              + "&conta=" + form.conta
+              + "&favorecido" + form.favorecido
+              + "&valor_transferencia" + form.valor_transferencia
+              + "&tipo_transferencia" + form.tipo_transferencia;
+    this.http.post("http://www.teste.com", body).subscribe((data) => {});
+
   }
 
 }

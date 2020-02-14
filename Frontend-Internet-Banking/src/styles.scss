@@ -120,6 +120,11 @@ h2 {
 .icon-white {
     color: white;
 }
+.overflow-hidden {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
 
 .bg-yellow {
     background-color: rgb(226, 188, 73);
@@ -129,6 +134,14 @@ h2 {
     margin-bottom: 10px !important;
 }
 
+.align-items-top {
+    align-items: flex-start;
+    
+}
+
+.align-content {
+    align-content: stretch !important;
+}
 .margin-bottom-20 {
     margin-bottom: 20px !important;
 }
