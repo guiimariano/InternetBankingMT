@@ -7,7 +7,7 @@
         <div class="row container">
             <div class="col s12">
                 <div class="row s12 m12">
-                    <p class="right-align"> Extrato de {{dataInicial | date}} até {{dataAtual | date}}</p>
+                    <p class="right-align font-small"> Extrato de {{dataInicial | date}} até {{dataAtual | date}}</p>
                     <mz-select-container class="col s9 m3">
                         <select mz-select [label]="'Selecione o periodo'" id="basic-select"
                             (change)="changeSuit($event)">
@@ -20,10 +20,9 @@
                         </select>
                     </mz-select-container>
                 </div>
-                <table class="responsive-table ">
+                <table class="responsive-table">
                     <thead>
                         <tr>
-                            <th>Id</th>
                             <th>Descrição</th>
                             <th>Categoria</th>
                             <th>Data</th>
@@ -33,7 +32,6 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let transacao of extratoFiltrado">
-                            <td>{{ transacao.id }}</td>
                             <td>{{ transacao.descricao }}</td>
                             <td>{{ transacao.categoria }}</td>
                             <td>{{ transacao.data | date }}</td>

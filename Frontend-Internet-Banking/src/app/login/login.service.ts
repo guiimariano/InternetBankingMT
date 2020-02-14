@@ -15,7 +15,7 @@ export class LoginService {
   ) { }
 
   logar(cpf: string, senha: string): Observable<Usuario> {
-    if (cpf === 'cpf' && senha === '123') {
+    if (cpf === '12345678909' && senha === '123456') {
       return of({
         nome: 'André',
         email: 'email@teste.com.br',
