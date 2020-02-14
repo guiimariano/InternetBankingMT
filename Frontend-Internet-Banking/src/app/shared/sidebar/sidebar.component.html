@@ -3,8 +3,8 @@
         <mz-sidenav class="col" #sidenav [id]="'sidenav-demo'" [fixed]="'true'" style="background-color: transparent">
             <div class="max-height nav-color">
                 <div class="row">
-                    <button mz-button class="col s5 offset-s6 btn-flat white-text"
-                        (click)="sidenav.opened = !sidenav.opened">
+                    <button mz-button class="col s5 offset-s6 btn-flat white-text show-on-small hide-on-med-and-up"
+                        (click)="logout()">
                         <i class="material-icons icon-white right">close</i>Sair
                     </button>
                 </div>
